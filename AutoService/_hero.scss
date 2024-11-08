@@ -1,0 +1,114 @@
+.hero {
+  padding: 98px 0 50px;
+  background: $backgroundColorHero url("../img/Wheel.png") center/contain
+    no-repeat;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    color: $colorTitle;
+    font-size: 160px;
+    font-weight: 900;
+    line-height: 150%;
+  }
+  &__title-up{
+    align-self: start;
+    }
+  &__title-down{
+    align-self: end;
+    margin-top: -70px; 
+  }
+  &__intro{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__year{
+    align-self: end;
+    color: $colorTitle;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  &__tagline{
+    width: min-content;
+    color: $colorRed;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+}
+
+@media (max-width: 1080px){
+
+  .hero{
+    padding-top: 63px;
+    padding-bottom: 32px;
+    &__title{
+      font-size: 120px;
+    }
+    &__title-down{
+      margin-top: -63px;
+    }
+    &__intro{
+      margin-top: -20px;
+    }
+    &__tagline{
+      padding-bottom: 0;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px){
+  .hero{
+    padding-top: 58px;
+    padding-bottom: 6px;
+    &__title{
+      font-size: 90px;
+    }
+    &__title-down{
+      margin-top: -32px;
+    }
+    &__intro{
+      margin-top: -4px;
+    }
+    &__year{
+      align-self: start;
+    }
+    &__tagline{
+      padding-bottom: 0;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 660px){
+  .hero{
+    padding-top: 45px;
+    padding-bottom: 25px;
+    &__title{
+      font-size: 68px;
+    }
+    &__title-down{
+      margin-top: -20px;
+      margin-bottom: 32px;
+    }
+    &__intro{
+      margin-top: 0;
+    }
+    &__tagline{
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 460px){
+  .hero{
+   
+    background-size: 208px;
+
+    &__title{
+      font-size: 44px;
+    }
+    
+  }
+}
