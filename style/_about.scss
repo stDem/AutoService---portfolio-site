@@ -1,0 +1,164 @@
+%about-bg {
+  content: "";
+  position: absolute;
+  background: url('../img/Tire.svg') center/contain no-repeat;
+  pointer-events: none;
+  height: 25vw;
+  left: 0;
+  right: 0;
+}
+.about {
+  padding: 92px 0;
+  background-image: linear-gradient(
+    $backgroundColorHero 0%,
+    $backgroundColorHero 50%,
+    $backgroundColor 50%,
+    $backgroundColor 100%
+    );
+
+  &__bg {
+    display: flex;
+    position: relative;
+    min-height: 56vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('/img/redbg.svg');
+  }
+  &__bg::before {
+    @extend %about-bg;
+    top: 0;
+    transform: translateY(-25%);
+  }
+  &__bg::after {
+    @extend %about-bg;
+    bottom: 0;
+    transform: translateY(25%);
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+  &__title{
+    padding: 14px 60px 14px 0;
+    max-width: min-content;
+    text-align: right;
+    justify-self: end;
+    color:$colorTitle;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120%;
+    text-transform: uppercase;
+    border-right: 2px solid $colorTitle;
+    &__text_black{
+        color: $backgroundColorHero;
+    }
+  }
+  &__text{
+    padding: 14px 0 14px 60px;
+    max-width: 510px;
+    justify-self: start;
+    justify-self: start;
+    color:$colorTitle;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  
+}
+
+@media (max-width: 1080px){
+  .about{
+    padding: 80px 0;
+    &__title{
+      font-size: 60px;
+      padding: 8px 40px 8px 0;
+      min-width: 406px;
+    }
+    &__text{
+      padding: 8px 0 8px 40px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 900px){
+  .about{
+    padding: 90px 0 55px;
+    &__bg{
+      background-size: auto 100%;
+      padding: 82px 0 68px;
+    }
+    &__container{
+      grid-template-columns: 1fr;
+      min-width: 420px;
+    }
+    &__title{
+      font-size: 48px;
+      padding: 7px 24px 7px 0;
+      max-width: none;
+      justify-self: stretch;
+      text-align: left;
+      align-self: end;
+      border-right: 0;
+      border-bottom: 2px solid $colorTitle;
+    }
+    &__text{
+      padding: 12px 0 0;
+      align-self: start;  
+      font-size: 20px;
+      min-width: none;
+    }
+  }
+}
+
+@media (max-width: 660px){
+  .about{
+    padding: 50px 0 25px;
+    &__bg{
+      background-size: auto 100%;
+      padding: 82px 0 68px;
+    }
+    &__container{
+      grid-template-columns: 1fr;
+      min-width: 420px;
+    }
+    &__title{
+      max-width: none;
+      justify-self: stretch;
+      text-align: left;
+      font-size: 32px;
+      padding: 0 0 12px;
+      align-self: end;
+      border-right: 0;
+      border-bottom: 2px solid $colorTitle;
+    }
+ 
+    &__text{
+      padding: 12px 0 0;
+      align-self: start;  
+      font-size: 16px;
+      min-width: none;
+    }
+  }
+}
+
+@media (max-width: 460px){
+  .about{
+    &__bg::before{
+      transform: translateY(-15%);
+    }
+    &__bg::after{
+      transform: translateY(15%);
+    }
+    &__title{
+      font-size: 20px;
+    }
+    &__text{
+      font-size: 13px;
+    }
+  }
+}
+
